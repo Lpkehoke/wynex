@@ -13,7 +13,7 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: white;
-	color: #333;
+	color: #fff;
 	font-family: "Segoe UI", Arial, sans-serif;
 	font-size: 1em;
 	line-height: 135%;
@@ -25,6 +25,98 @@ img {
 	width: auto\9;
 }
 
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
 .clear {
 	clear: both;
+}
+
+/*Стили для шапки */
+
+header {
+	width: 100%;
+	height: 60px;
+	background: #000;
+	float: left;
+}
+
+header .name-logo {
+	float: left;
+	width: 18%;
+	font-size: 30px;
+	padding: 1%;
+}
+
+header .search {
+	padding: 1%;
+	float: left;
+	width: 58%;
+
+}
+
+header .registr-auth {
+	padding: 1%;
+	float: left;
+	width: 18%;
+}
+
+header .profile {
+	display: none;
+}
+
+header .search input {
+	border-radius: 10px;
+	border: 2px solid #353330;
+	color: #350D57;
+	padding: 4px;
+}
+
+header .search input:focus {
+	border: 2px solid #A2A718;
+}
+
+header .search input:hover {
+	cursor: pointer;
+	border: 2px solid #D5DC22;
+}
+
+/*** стили для футера ***/
+
+footer {
+	/********************/margin-top:10px; /* потом стереть!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+	width: 100%;
+	height: 60px;
+	background: #000;
+	float: left;
+}
+
+footer div {
+	float: left;
+}
+
+footer .autor {
+	float: left;
+	width: 18%;
+	padding-left: 1%;
+	margin-left: 1%;
+}
+
+footer .about {
+	padding: 1%;
+	float: left;
+	width: 58%;
+	text-align: center;
+}
+
+footer .feedback {
+	padding: 1%;
+	float: left;
+	width: 18%;
+}
+
+.vk-img {
+	width: 25px;
 }
