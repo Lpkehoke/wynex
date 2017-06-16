@@ -6,12 +6,12 @@
 }
 
 html {
-	height: 100%;
+	min-height: 100%;
 }
 
 body {
-	width: 100%;
-	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
 	background-color: white;
 	color: #fff;
 	font-family: "Segoe UI", Arial, sans-serif;
@@ -37,6 +37,7 @@ a {
 /*Стили для шапки */
 
 header {
+	display: block;
 	width: 100%;
 	height: 60px;
 	background: #000;
@@ -57,7 +58,7 @@ header .search {
 
 }
 
-header .registr-auth {
+header .registr-auth , header .profile {
 	padding: 1%;
 	float: left;
 	width: 18%;
@@ -83,10 +84,67 @@ header .search input:hover {
 	border: 2px solid #D5DC22;
 }
 
+/*** Стили для основной части ***/
+
+.wrapper {
+	display: block;
+	min-height: calc(100vh - 120px);
+	float: left;
+	width: 100%;
+}
+
+.wrapper .main {
+	min-width: 82%;
+	height: calc(96vh - 120px);
+	min-height: 100%;
+	float: left;
+	background: #A29B9B;
+	padding: 2%;
+}
+
+/*** Стили для полей в регистрациях ***/
+
+.wrapper .main form .spase-inp {
+	border-radius: 5px;
+	border: 2px solid #E79033;
+	margin: 5px;
+	height: 25px;
+	width: 200px;
+	color: #9322B4;
+	background: #DAC9C9;
+}
+
+.wrapper .main form .button-in {
+	border: 2px solid #7B6519;
+	background: #E79033;
+	border-radius: 5px;
+	padding: 4px;
+	margin: 5px;
+} 
+
+.wrapper .main form .button-in:hover {
+	border: 2px solid #E1E733;
+	background: #E1E733;
+	cursor: pointer;
+}
+
+/*** Стили для левой колонки ***/
+
+.wrapper .sidebar {
+	min-width: 10%;
+	background: #000;
+	height: calc(96vh - 120px);
+	float: left;
+	padding: 2%;
+}
+
+
+
 /*** стили для футера ***/
 
 footer {
-	/********************/margin-top:10px; /* потом стереть!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+	display: block;
+	float: left;
 	width: 100%;
 	height: 60px;
 	background: #000;
@@ -119,4 +177,12 @@ footer .feedback {
 
 .vk-img {
 	width: 25px;
+}
+
+/****Ошибки ***/
+.wrapper .main form .error {
+	color: #f00;
+	font-size: 15px;
+	padding-left: 10px;
+	display: none;
 }

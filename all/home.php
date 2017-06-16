@@ -1,5 +1,5 @@
 <?php
-	$title = "Подтверждение"; 
+	$title = "Wynex"; 
 	require_once 'resources/blocks/head.php';
 ?>
 </head>
@@ -7,7 +7,9 @@
 	<?php require_once 'resources/blocks/header.php'; ?>
 
 	<div class="wrapper">
-		<div class="main"></div>
+		<div class="main">
+			
+		</div>
 		<?php require_once 'resources/blocks/leftcol.php'; ?>
 	</div>
 

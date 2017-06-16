@@ -12,10 +12,10 @@
 		</div>
 	</div>
 	<div class="about">
-		<a href="/">О проеке</a>
+		<a href="info">О проеке</a>
 	</div>
 	<div class="feedback">
-		<a href="/">Обратная связь</a>
+		<a href="feedback">Обратная связь</a>
 	</div>
 
 </footer>

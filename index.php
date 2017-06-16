@@ -8,6 +8,15 @@
 			exit('error url'); 
 	}
 
+	/* Подключение к базе данных*/
+
+	$connection = mysqli_connect('localhost' , 'root' , '' , 'test-db');
+
+	if ($connection == false){
+		echo "не удалось подключиться к базе данных!";
+		die();
+	}
+
 	/* Подгрузка страниц:*/
 
 	session_start();
