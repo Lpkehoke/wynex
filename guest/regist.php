@@ -2,7 +2,6 @@
 	$title = "Регистрация"; 
 	require_once 'resources/blocks/head.php';
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="resources/js/checReg.js"></script>
 </head>
 <body>
@@ -19,6 +18,7 @@
 				<span class="error" id="unemail">Почта введена некорректно<br></span>
 				<input type="password" placeholder="Пароль" class="spase-inp" id="passwordR"> <br>
 				<span class="error" id="empty-pasR">Вы не ввели пароль<br></span>
+				<span class="error" id="uncor-pasR">Вы ввели некоректный пароль<br></span>
 				<input type="password" placeholder="Повторите пароль" class="spase-inp" id="repasswordR"> <br>
 				<span class="error" id="repas-er">Пароли не совпадют<br></span>
 				<input type="button" value="Регистрация" class="button-in" onclick="checReg()"> 

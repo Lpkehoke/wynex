@@ -2,7 +2,6 @@
 	$title = "Вход"; 
 	require_once 'resources/blocks/head.php';
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="resources/js/checInput.js"></script>
 </head>
 <body>

@@ -1,5 +1,13 @@
 var loginCh = /^[a-zA-Z1-9]+$/;
 
+function funSeccess(qwe) {
+	if (qwe){
+		alert(qwe);
+		return false;
+	}
+	location.href='/';
+}
+
 function checInput() {
 	if ($("#login").val() == ""){
 		$("#uncorrect").hide();
@@ -24,8 +32,16 @@ function checInput() {
 	else
 		$("#empty-pas").hide();
 
+	var str = ('&login=' + $("#login").val() + '&password=' + $("#password").val() ) ;
 
-	
+	$.ajax ({
+		url: '/gform' ,
+		type: 'POST' , 
+		data: 'login_f=1' + str,
+		cache: false,
+		dataType: "html",
+		success: funSeccess
+	});
 
-	
+
 }
