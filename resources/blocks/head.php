@@ -8,4 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<script type="text/javascript" src="resources/js/outProfile.js"></script>
+	<script type="text/javascript" src="resources/js/show-menu.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+
 

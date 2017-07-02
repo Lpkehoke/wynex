@@ -31,7 +31,13 @@ if ($_POST['login_f'] == 2)
 		'email' => $_POST['email'],
 		'code' => $code
 	);
-	mail($_POST['email'], 'Регистрация' , "Код подтверждения регистрации: <b>$code</b>");
+	$title = "Регистрация";
+	$body="--$bound\n";
+	$body.="Content-type: text/html; charset=\"windows-1251\"\n";
+	$body.="Content-Transfer-Encoding: 8bit\n\n";
+	$body.="
+  	<br /><br />Код подтверждения регистрации: <b>$code</b><br />";
+	mail($_POST['email'], $title , $body);
 }
 
 
@@ -44,7 +50,13 @@ if ($_POST['login_f'] == 4)
 		{
 			$_newPass = random_str(8);
 			mysqli_query($connection , 'UPDATE `users` SET `password` = "'.md5($_newPass).'" WHERE `email` = "'.$_SESSION['confirm']['email'].'" ');
-			mail($_SESSION["confirm"]["email"], 'Новый пароль' , "Ваш новый пароль: <b>$_newPass</b> Вы можете изменить его в личном кабинете");
+			$title = "Новый пароль";
+			$body="--$bound\n";
+			$body.="Content-type: text/html; charset=\"windows-1251\"\n";
+			$body.="Content-Transfer-Encoding: 8bit\n\n";
+			$body.="
+		  	<br /><br />Ваш новый пароль: <b>$_newPass</b> Вы можете изменить его в личном кабинете<br />";
+			mail($_SESSION["confirm"]["email"], $title , $body);
 			echo "Новый пароль у вас на почте";
 			unset($_SESSION['confirm']);
 			die();
@@ -73,13 +85,15 @@ if ($_POST['login_f'] == 3)
 		'email' => $_POST['email'],
 		'code' => $code,
 		'from' => 'recovery');
-	$title = 'Восстановление пароля';
-	$mes = "Код подтверждения восстановления пароля: <b>$code</b>";
-	mail($_POST['email'], $title , $mes);
+	$title = "Восстановление пароля";
+	$body="--$bound\n";
+	$body.="Content-type: text/html; charset=\"utf-8\"\n";
+	$body.="Content-Transfer-Encoding: 8bit\n\n";
+	$body.="<br /><br />Код подтверждения восстановления пароля: <b>$code</b><br />";
+	mail($_POST["email"], $title , $body);
 }
 
 if ($_POST['login_f'] == 5){
 	session_destroy();
 }
-
 ?>

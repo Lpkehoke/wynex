@@ -2,6 +2,7 @@
 	$title = "Конструктор"; 
 	require_once 'resources/blocks/head.php';
 ?>
+<script type="text/javascript" src="resources/js/compliteStory.js"></script>
 </head>
 <body>
 	<?php require_once 'resources/blocks/header.php'; ?>

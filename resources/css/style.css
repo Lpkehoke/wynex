@@ -34,6 +34,12 @@ a:hover {
 	color: #BEDF8A;
 }
 
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 
 /*Стили для шапки */
 
@@ -45,8 +51,8 @@ header {
 
 header .name-logo {
 	float: left;
-	width: 18%;
-	font-size: 30px;
+	width: 28%;
+	font-size: 1.875em;
 	padding: 1%;
 }
 
@@ -58,7 +64,7 @@ header .name-logo {
 header .search {
 	padding: 1%;
 	float: left;
-	width: 38%;
+	width: 28%;
 
 }
 
@@ -122,6 +128,32 @@ header .search input:hover {
 	padding: 2%;
 }
 
+/* ** Выпадающее меню * */
+
+.a-for-log {
+	display: block;
+	border: 1px solid #D0CACA;
+	background: #96969E;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.p-for-log {
+	position: relative;
+}
+
+.p-for-log:hover {
+	cursor: pointer;
+	color: #F4E82C;
+}
+
+
+.ul-foll {
+	padding: 2px;
+	position: absolute;
+	right: 0px;
+	display: none;
+}
 
 
 /*** Стили для полей в регистрациях ***/
@@ -196,20 +228,20 @@ footer div {
 footer .autor {
 	float: left;
 	text-align: right;
-	width: 18%;
+	width: 38%;
 	padding-left: 1%;
 	margin-left: 1%;
 }
 
 footer .autor div {
 	text-align: right;
-	float: right;
+	float: none;
 }
 
 footer .about {
 	padding: 1%;
 	float: left;
-	width: 58%;
+	width: 38%;
 	text-align: left;
 }
 
@@ -224,9 +256,100 @@ footer .feedback {
 }
 
 /****Ошибки ***/
-.wrapper .main form .error {
+.error {
 	color: #f00;
 	font-size: 15px;
 	padding-left: 10px;
+	display: none;
+}
+
+
+
+
+
+
+
+
+/***********  Конструктор   *********************************************/
+.level-1-name {
+	text-align: center;
+}
+
+
+.level-1-name .text-name-inp {
+	height: 30px;
+	width: 200px;
+	border-radius: 8px;
+	border: 3px solid #66A5F4;
+	text-align: center;
+	font-size: 1.4em;
+	font-family: 'EB Garamond', serif , arial ,sans-serif;
+	color: #000;
+}
+
+.level-1-name .text-name-inp:hover {
+	border: 3px solid #8DB8EF;
+	cursor: pointer;
+}
+
+.level-1-name .button-save-name {
+	background: #4CB4F0;
+	border: 2px solid #84ACED;
+	border-radius: 4px;
+}
+
+#level-2-story , .rools{
+	display: none;
+	float: left;
+}
+
+#level-2-story {
+	padding: 5px;
+}
+
+.text-of-story-all {
+	font-family: 'EB Garamond', serif , arial ,sans-serif;
+	border-radius: 7px;
+	width: 60%;
+	font-size: 1.4em;
+}
+
+.but-for-new {
+	background: #4CB4F0;
+	border: 2px solid #84ACED;
+	border-radius: 4px;
+	height: 20px;
+	width: 150px;
+}
+
+.but-for-new:hover {
+	background: #5ECDF2;
+}
+
+.change-all {
+	font-family: 'EB Garamond', serif , arial ,sans-serif;
+	height: 30px;
+	width: 200px;
+	font-size: 1em;
+	border-radius: 5px;
+}
+
+.save-story {
+	text-align: center;
+	width: 200px;
+	height: 30px;
+	background: #50DF49;
+	float: none;
+	border-radius: 5px;
+	border: 0;
+	margin-left: 80%;
+	display: none;
+}
+
+.save-story:hover {
+	background: #50FC2E;
+}
+
+.final-s {
 	display: none;
 }
