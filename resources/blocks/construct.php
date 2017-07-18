@@ -7,4 +7,5 @@
 	</div>
 	<span class="rools">(поля можно расширять)</span><br>
 </div>
+<button class="save-story" onclick="rename()">Изменить название историии</button>
 <button class="save-story" onclick="saveSt()">Сохранить историю</button>

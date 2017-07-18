@@ -1,14 +1,16 @@
 <?php
 /*
-	1 - login
-	2 - regist
+	1 - login ++
+	2 - regist ++ 
 	3 - recovery
 	4 - confirm
-	5 - logout
+	5 - logout ++ 
 */
 if ($_POST['login_f'] == 1) 
 {
-	$_POST[password] = md5($_POST[password]);
+	$sol =  mysqli_query( $connection , "SELECT `solid` FROM `users` WHERE `login` = '$_POST[login]'" );
+	$solt =  mysqli_fetch_assoc($sol)[solid];
+	$_POST[password] = crypt( $_POST[password] , $solt);
 	if ( !mysqli_num_rows(mysqli_query($connection , "SELECT `id` FROM `users` WHERE `login` = '$_POST[login]' AND `password` = '$_POST[password]' ")))
 		exit ('Неправильно введен логин или пароль');
 	$row = mysqli_fetch_assoc(mysqli_query($connection , "SELECT * FROM `users` WHERE `login` = '$_POST[login]'"));
@@ -49,13 +51,14 @@ if ($_POST['login_f'] == 4)
 		if ($_POST['code'] == $_SESSION['confirm']['code'])
 		{
 			$_newPass = random_str(8);
-			mysqli_query($connection , 'UPDATE `users` SET `password` = "'.md5($_newPass).'" WHERE `email` = "'.$_SESSION['confirm']['email'].'" ');
+			$_newSoll = random_str(10);
+			mysqli_query($connection , 'UPDATE `users` SET `password` = "'.crypt($_newPass , $_newSoll).'" WHERE `email` = "'.$_SESSION['confirm']['email'].'" ');
+			mysqli_query($connection , 'UPDATE `users` SET `solid` = "'.$_newSoll.'" WHERE `email` = "'.$_SESSION['confirm']['email'].'" ');
 			$title = "Новый пароль";
 			$body="--$bound\n";
 			$body.="Content-type: text/html; charset=\"windows-1251\"\n";
 			$body.="Content-Transfer-Encoding: 8bit\n\n";
-			$body.="
-		  	<br /><br />Ваш новый пароль: <b>$_newPass</b> Вы можете изменить его в личном кабинете<br />";
+			$body.="<br /><br />Ваш новый пароль: <b>$_newPass</b> Вы можете изменить его в личном кабинете<br />";
 			mail($_SESSION["confirm"]["email"], $title , $body);
 			echo "Новый пароль у вас на почте";
 			unset($_SESSION['confirm']);
@@ -68,7 +71,8 @@ if ($_POST['login_f'] == 4)
 	}
 
 	if ($_POST['code'] == $_SESSION['confirm']['code']){
-		mysqli_query($connection , 'INSERT INTO `users` (`login`, `password`, `email`) VALUES ("'.$_SESSION['confirm']['login'].'" ,"'.md5($_SESSION["confirm"]["password"]).'" , "'.$_SESSION["confirm"]["email"].'")');
+		$sol = random_str(10);
+		mysqli_query($connection , 'INSERT INTO `users` (`login`, `email` ,`password`, `solid` ) VALUES ("'.$_SESSION['confirm']['login'].'" , "'.$_SESSION["confirm"]["email"].'" ,"'.crypt($_SESSION["confirm"]["password"] , $sol).'" , "'.$sol.'")');
 		unset($_SESSION['confirm']);
 		}
 	else

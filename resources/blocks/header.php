@@ -12,7 +12,7 @@
 		<?php 
 			if ($_SESSION['id'])
 				echo '<div class="profile" id="auth-yet">
-					<span class="p-for-log" onclick="showMenu()">' . $_SESSION["login"] . '</span>
+					<span class="p-for-log" onclick="showMenu()">' . $_SESSION['login'] . '</span>
 					<ul class="ul-foll" id="foll-id">
 						<li><a href="/profile" class="a-for-log">Мой профиль</a></li>
 						<li><a onclick="outProfile()" id="log-out" class="a-for-log">Выйти</a></li>

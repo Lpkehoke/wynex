@@ -334,9 +334,11 @@ footer .feedback {
 	border-radius: 5px;
 }
 
-/*.to-this {
+.to-this {
 	width: 200px;
-}*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 
 .save-story {
 	text-align: center;
@@ -348,6 +350,7 @@ footer .feedback {
 	border: 0;
 	margin-left: 80%;
 	display: none;
+	margin-top: 2px;
 }
 
 .save-story:hover {
