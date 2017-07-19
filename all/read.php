@@ -13,8 +13,24 @@
 
 	require_once 'resources/blocks/head.php';
 ?>
+
+</head>
+<body>
+	<?php require_once 'resources/blocks/header.php'; ?>
+
+	<div class="wrapper">
+		<div class="main">
+			<div id="main-body">
+				<button onclick="newSlide(0)" class="but-in-trans restart">Начать сначала</button>
+			</div>
+		</div>
+		<?php require_once 'resources/blocks/leftcol.php'; ?>
+	</div>
+
+	<?php require_once 'resources/blocks/footer.php'; ?>
+
+
 <script type="text/javascript">
-	
 var GstoryR = [];
 var GtransR = [];
 
@@ -26,29 +42,11 @@ var GtransR = [];
 	}
 
 ?>
-</script>
 
-</head>
-<body>
-	<?php require_once 'resources/blocks/header.php'; ?>
-
-	<div class="wrapper">
-		<div class="main">
-			<div id="main-body">
-				
-			</div>
-		</div>
-		<?php require_once 'resources/blocks/leftcol.php'; ?>
-	</div>
-
-	<?php require_once 'resources/blocks/footer.php'; ?>
-
-
-<script type="text/javascript">
 function newSlide( id )
 {
 	$(".main-text").remove();
-	$("#main-body").append("<div class='main-text'><span>" + GstoryR[id][1] + "</span></div>");
+	$("#main-body").prepend("<div class='main-text'><span>" + GstoryR[id][1] + "<br></span></div>");
 	newButt(id);
 }
 
@@ -57,7 +55,7 @@ function newButt( id )
 	for (var i = 0; i < GtransR.length; i++) 
 	{
 		if (GtransR[i][0] == ( id + 1 ) )
-			$("#main-body").append("<span class='main-text'><button onclick='newSlide(" + (GtransR[i][1] - 1) + ")'>" + GtransR[i][2] + "</button><br></span>");
+			$(".main-text").append("<span class='main-text-in'><button onclick='newSlide(" + (GtransR[i][1] - 1) + ")' class='but-in-trans'>" + GtransR[i][2] + "</button><br></span>");
 	}
 }
 

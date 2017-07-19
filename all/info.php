@@ -9,6 +9,7 @@
 
 	<div class="wrapper">
 		<div class="main">
+		<span>Данный проект предназначен для создания историй с разветвленным сюжетом. Первая версия сайта 19.07.17.<br> Текущая версия сайта 0.02. (Поиск не работает!)</span>
 		</div>
 		<?php require_once 'resources/blocks/leftcol.php'; ?>
 	</div>

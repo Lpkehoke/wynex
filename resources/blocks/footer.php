@@ -7,12 +7,12 @@
 			<a href="feedback">Обратная связь</a>
 		</div>
 		<div class="autor">
-			<div>Автор сайта: Lokehoke
+			<div class="my-name">Автор сайта: Lokehoke
 				<a href="https://vk.com/id133127261">
 					<img src="resources/img/vk.svg" class="vk-img">
 				</a>
 			</div>
-			<div>Автор идеи: Futyn
+			<div class="my-name">Автор идеи: Futyn
 				<a href="https://vk.com/nikitanosachev">
 					<img src="resources/img/vk.svg" class="vk-img">
 				</a>

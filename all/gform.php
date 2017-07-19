@@ -72,7 +72,8 @@ if ($_POST['login_f'] == 4)
 
 	if ($_POST['code'] == $_SESSION['confirm']['code']){
 		$sol = random_str(10);
-		mysqli_query($connection , 'INSERT INTO `users` (`login`, `email` ,`password`, `solid` ) VALUES ("'.$_SESSION['confirm']['login'].'" , "'.$_SESSION["confirm"]["email"].'" ,"'.crypt($_SESSION["confirm"]["password"] , $sol).'" , "'.$sol.'")');
+		$timeFF = time();
+		mysqli_query($connection , 'INSERT INTO `users` (`login`, `email` ,`password`, `solid` , `data_of_registration` ) VALUES ("'.$_SESSION['confirm']['login'].'" , "'.$_SESSION["confirm"]["email"].'" ,"'.crypt($_SESSION["confirm"]["password"] , $sol).'" , "'.$sol.'" , "'.$timeFF.'")');
 		unset($_SESSION['confirm']);
 		}
 	else

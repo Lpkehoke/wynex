@@ -28,16 +28,16 @@ if ($_POST['from'] == 1)
 			continue;
 		}
 
-		for ($j = 0; $j < count($fin) ; $j++)
+		for ($j = 0; $j < count($fin) ; $j++) /// Запись финальных
 			if ( $fin[$j] == ($i) )
 			{
 				mysqli_query($connection , 'INSERT INTO `cell` ( `id_in_story` , `story` , `text` , `status` ) VALUES ("'.$i.'" , "'.$id['id'].'" , "'.$_POST['text' . ($i)].'" , "3")');
-				mysqli_query($connection , 'INSERT INTO `button` ( `id_story` , `parent` , `child`, `choise` ) VALUES ("'.$id['id'].'" , "'.$_POST['idper' . ($i)].'" , "'.$i.'" , "'.$_POST['choise' . ($i)].'")');
-				continue 2;
+				mysqli_query($connection , 'INSERT INTO `button` ( `id_story` , `parent_from` , `child`, `choise` ) VALUES ("'.$id['id'].'" , "'.$_POST['idper' . ($i)].'" , "'.$i.'" , "'.$_POST['choise' . ($i)].'")'); // строчка такая же , как 
+				continue 2; 
 			}
-
+			// Запись обычных
 		mysqli_query($connection , 'INSERT INTO `cell` ( `id_in_story` , `story` , `text` , `status` ) VALUES ("'.$i.'" , "'.$id['id'].'" , "'.$_POST['text' . ($i)].'" , "2")');
-		mysqli_query($connection , 'INSERT INTO `button` ( `id_story` , `parent` , `child`, `choise` ) VALUES ("'.$id['id'].'" , "'.$_POST['idper' . ($i)].'" , "'.$i.'" , "'.$_POST['choise' . ($i)].'")');
+		mysqli_query($connection , 'INSERT INTO `button` ( `id_story` , `parent_from` , `child`, `choise` ) VALUES ("'.$id['id'].'" , "'.$_POST['idper' . ($i)].'" , "'.$i.'" , "'.$_POST['choise' . ($i)].'")'); //// эта она такая же))
 
 	}
 	

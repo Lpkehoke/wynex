@@ -156,6 +156,10 @@ header .search input:hover {
 }
 
 
+.spisok {
+	margin-left: 30px;
+}
+
 /*** Стили для полей в регистрациях ***/
 
 .wrapper .main form {
@@ -197,18 +201,20 @@ input::-moz-placeholder          {color:#302D2D;}/* Firefox 19+ */
 /*** Стили для левой колонки ***/
 
 .wrapper .sidebar {
-	min-width: 11%;
+	width: 11%;
 	background: #131111;
 	float: left;
 	display: block;
 	height: calc(100vh - 120px);
+	font-size: 0.75em;
 }
 
 .wrapper .sidebar .insidebar {
 	margin: 10px 0px 0px 10px;
 	background: #000;
 	height: calc(96vh - 160px);
-	border-radius: 20px 0px 0px 20px;
+	/*border-radius: 20px 0px 0px 20px;*/
+	padding: 1%;
 }
 
 
@@ -251,8 +257,12 @@ footer .feedback {
 	width: 18%;
 }
 
+.my-name {
+	font-size: 0.85em;
+}
+
 .vk-img {
-	width: 25px;
+	width: 20px;
 }
 
 /****Ошибки ***/
@@ -263,8 +273,19 @@ footer .feedback {
 	display: none;
 }
 
+/****** Транслятор */
 
+.but-in-trans {
+	border:0;
+	background: #2FE7F3;
+	border-radius: 3px;
+	padding: 2px;
+}
 
+.restart {
+	border: 2px solid #F53648;
+	margin-top: 2px;
+}
 
 
 

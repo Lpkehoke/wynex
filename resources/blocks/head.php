@@ -10,6 +10,6 @@
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 	<script type="text/javascript" src="resources/js/outProfile.js"></script>
 	<script type="text/javascript" src="resources/js/show-menu.js"></script>
-	
+	<link href="resources/img/moon.ico" rel="icon" type="image/x-icon" />
 
 

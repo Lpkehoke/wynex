@@ -2,9 +2,9 @@ var nameStor = "";
 var count = 1; /////////////id блока 1 в 1
 var linkpar = []; // предок
 var linkchi = []; // ребенок
-const MIN_SLIDE = -1; /// минимальное колво слайдов
+const MIN_SLIDE = 6; /// минимальное колво слайдов
 var openRen = false; // открыт ли редактор изменения названия
-const Max_NAME = 60; // max length of name
+const Max_NAME = 40; // max length of name
 
 
 function saveName() 
@@ -148,7 +148,7 @@ function saveSt()
 	for (var i = 0; i < count ; i++ )
 		if ( linkchi[i] )
 		{
-			strfortr += ("&text"+ ( i + 2 ) + "=" + $(".text-of-story-" + (i + 2) ).val() + "&choise"+ ( i + 2 ) + "=" + $(".to-this-" + (i + 2) ).html() + "&idper"+ ( i + 2 ) + "=" + linkpar[i] );
+			strfortr += ("&text"+ ( i + 2 ) + "=" + $(".text-of-story-" + (i + 2) ).val() + "&choise"+ ( i + 2 ) + "=" + $(".to-this-" + (i + 2) ).text() + "&idper"+ ( i + 2 ) + "=" + linkpar[i] );
 			num++;
 		}
 		var numfin = 1;
