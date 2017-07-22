@@ -9,6 +9,7 @@ session_start();
 
 $connection = mysqli_connect('localhost' , 'root' , '' , 'wynex-db');
 
+
 if ($connection == false)
 {
 	echo "Не удалось подключиться к базе данных!";

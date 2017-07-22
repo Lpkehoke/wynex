@@ -38,7 +38,7 @@ if ($_POST['login_f'] == 2)
 	$header =  "Content-type: text/html; charset=UTF-8";
 	$title = "Регистрация";
 	$body="Код подтверждения регистрации:<b>$code</b>";
-	mail($_POST['email'], $title , $body , $header);
+	mail($_POST['email'], $title , $body);
 }
 
 
@@ -57,7 +57,7 @@ if ($_POST['login_f'] == 4)
 			$header =  "Content-type: text/html; charset=UTF-8";
 			$title = "Новый пароль";
 			$body="Ваш новый пароль: <b>$_newPass</b><br> Вы можете изменить его в личном кабинете";
-			mail($_SESSION["confirm"]["email"], $title , $body , $header);
+			mail($_SESSION["confirm"]["email"], $title , $body);
 
 			echo "Новый пароль у вас на почте";
 			unset($_SESSION['confirm']);
@@ -95,7 +95,7 @@ if ($_POST['login_f'] == 3)
 	$header =  "Content-type: text/html; charset=UTF-8";
 	$title = "Восстановление пароля";
 	$body= "Код подтверждения восстановления пароля: <b>$code</b>";
-	mail($_POST["email"], $title , $body , $header);
+	mail($_POST["email"], $title , $body);
 }
 
 if ($_POST['login_f'] == 5)

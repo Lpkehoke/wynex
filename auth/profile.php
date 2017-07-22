@@ -16,9 +16,13 @@
 			<span>Ваши истории:</span><br>
 			<ol>
 				<?php 
-					$story = mysqli_fetch_assoc(mysqli_query($connection , "SELECT `nstory` FROM `story` WHERE `autor` = '$_SESSION[id]' "));
-					foreach ($story as $value) {
-						echo "<li class='spisok'>$value</li>";
+					if($_SESSION['number_of_story'])
+					{
+						$story = mysqli_fetch_assoc(mysqli_query($connection , "SELECT `nstory` FROM `story` WHERE `autor` = '$_SESSION[id]' "));
+						foreach ($story as $value) 
+						{
+							echo "<li class='spisok'>$value</li>";
+						}
 					}
 				?>
 			</ol>
