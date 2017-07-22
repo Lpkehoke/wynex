@@ -1,0 +1,413 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	outline: none;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	color: #fff;
+	font-family:'Open Sans', sans-serif, Arial, sans-serif;
+	font-size: 1em;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+a:hover {
+	cursor: pointer;
+	color: #BEDF8A;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+/*Стили для шапки */
+
+header {
+	width: 100%;
+	height: 60px;
+	background: #000;
+}
+
+header .name-logo {
+	float: left;
+	width: 28%;
+	font-size: 1.875em;
+	padding: 1%;
+}
+
+#name-of-site {
+	color: #35B9F0;
+	font-family: 'Playfair Display', serif , Arial, sans-serif;
+}
+
+header .search {
+	padding: 1%;
+	float: left;
+	width: 28%;
+
+}
+
+header .const {
+	padding: 1%;
+	width: 18%;
+	float: left;
+	text-align: center;
+}
+
+header .registr-auth , header .profile {
+	padding: 1%;
+	float: left;
+	width: 18%;
+	text-align: right;
+}
+
+header .search input {
+	border-radius: 10px;
+	border: 2px solid #353330;
+	color: #350D57;
+	padding: 4px;
+}
+
+header .search input:focus {
+	border: 2px solid #54E1C8;
+}
+
+header .search input:hover {
+	cursor: pointer;
+	border: 2px solid #227ADC;
+}
+
+
+#log-out:hover{
+	cursor: pointer;
+}
+
+/*** Стили для основной части ***/
+
+.main-wrapper {
+	height: 100%;
+	width:100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper { 
+	width: 100%;
+	flex-grow: 1;
+	background: #131111;
+
+}
+
+
+
+.wrapper .main {
+	width: 85%;
+	float: left;
+	background: #131111;
+	padding: 2%;
+}
+
+
+/********* читалка *****************/
+.left-cell {
+	width: 50%;
+	float: left;
+}
+
+.right-cell {
+	width: 50%;
+	float: left;
+}	
+
+/* ** Выпадающее меню * */
+
+.a-for-log {
+	display: block;
+	border: 1px solid #D0CACA;
+	background: #96969E;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.p-for-log {
+	position: relative;
+}
+
+.p-for-log:hover {
+	cursor: pointer;
+	color: #F4E82C;
+}
+
+
+.ul-foll {
+	padding: 2px;
+	position: absolute;
+	right: 0px;
+	display: none;
+}
+
+
+.spisok {
+	margin-left: 30px;
+}
+
+/*** Стили для полей в регистрациях ***/
+
+.wrapper .main form {
+	margin: auto;
+	text-align: center;
+}
+
+.wrapper .main form .spase-inp {
+	border-radius: 5px;
+	border: 2px solid #79F4FC;
+	margin: 5px;
+	height: 25px;
+	width: 200px;
+	color: #000;
+	background: #fff;
+}
+
+.wrapper .main form .button-in {
+	border: 2px solid #F1F349;
+	background: #E5F127;
+	border-radius: 5px;
+	padding: 4px;
+	margin: 5px;
+} 
+
+.wrapper .main form .button-in:hover {
+	border: 2px solid #E1E733;
+	background: #E1E733;
+	cursor: pointer;
+}
+
+/*** Стили для левой колонки ***/
+
+.wrapper .sidebar {
+	width: 11%;
+	background: #131111;
+	float: left;
+	display: block;
+	height: calc(100vh - 120px);
+	font-size: 0.75em;
+}
+
+.wrapper .sidebar .insidebar {
+	margin: 10px 0px 0px 10px;
+	background: #000;
+	height: calc(96vh - 160px);
+	/*border-radius: 20px 0px 0px 20px;*/
+	padding: 1%;
+}
+
+
+
+/*** стили для футера ***/
+
+footer {
+	width: 100%;
+	height: 60px;
+	background: #000;	
+}
+
+footer div {
+	float: left;
+}
+
+footer .autor {
+	float: left;
+	text-align: right;
+	width: 38%;
+	padding-left: 1%;
+	margin-left: 1%;
+}
+
+footer .autor div {
+	text-align: right;
+	float: none;
+}
+
+footer .about {
+	padding: 1%;
+	float: left;
+	width: 38%;
+	text-align: left;
+}
+
+footer .feedback {
+	padding: 1%;
+	float: left;
+	width: 18%;
+}
+
+.my-name {
+	font-size: 0.85em;
+}
+
+.vk-img {
+	width: 20px;
+}
+
+/****Ошибки ***/
+.error {
+	color: #f00;
+	font-size: 15px;
+	padding-left: 10px;
+	display: none;
+}
+
+
+/********* 404 ******/
+.page404 {
+	/*font-size: 1.5em;*/
+}
+
+
+/****** Транслятор */
+
+.but-in-trans {
+	border:0;
+	background: #2FE7F3;
+	border-radius: 3px;
+	padding: 2px;
+}
+
+.restart {
+	border: 2px solid #F53648;
+	margin-top: 2px;
+}
+
+/**************** Профиль ******/
+.spase-inp-pr {
+	border: 2px solid #F69797;
+	height: 20px;
+	border-radius: 4px;
+	margin: 3px;
+}
+
+.but-in-prof {
+	background: #F89A9A;
+	border: none;
+	padding: 3px;
+	border-radius: 3px;
+	margin-left: 3px;
+}
+
+.but-in-prof:hover {
+	background: #F83F3F;
+}
+
+
+
+/***********  Конструктор   *********************************************/
+.level-1-name {
+	text-align: center;
+}
+
+
+.level-1-name .text-name-inp {
+	height: 30px;
+	width: 200px;
+	border-radius: 8px;
+	border: 3px solid #66A5F4;
+	text-align: center;
+	font-size: 1.4em;
+	font-family: 'EB Garamond', serif , arial ,sans-serif;
+	color: #000;
+}
+
+.level-1-name .text-name-inp:hover {
+	border: 3px solid #8DB8EF;
+	cursor: pointer;
+}
+
+.level-1-name .button-save-name {
+	background: #4CB4F0;
+	border: 2px solid #84ACED;
+	border-radius: 4px;
+}
+
+#level-2-story , .rools{
+	display: none;
+	float: left;
+}
+
+#level-2-story {
+	padding: 5px;
+}
+
+.text-of-story-all {
+	font-family: 'EB Garamond', serif , arial ,sans-serif;
+	border-radius: 7px;
+	width: 60%;
+	font-size: 1.4em;
+}
+
+.but-for-new {
+	background: #4CB4F0;
+	border: 2px solid #84ACED;
+	border-radius: 4px;
+	height: 20px;
+	width: 150px;
+}
+
+.but-for-new:hover {
+	background: #5ECDF2;
+}
+
+.change-all {
+	font-family: 'EB Garamond', serif , arial ,sans-serif;
+	height: 30px;
+	width: 200px;
+	font-size: 1em;
+	border-radius: 5px;
+}
+
+.to-this {
+	width: 200px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.save-story {
+	text-align: center;
+	width: 200px;
+	height: 30px;
+	background: #50DF49;
+	float: none;
+	border-radius: 5px;
+	border: 0;
+	margin-left: 80%;
+	display: none;
+	margin-top: 2px;
+}
+
+.save-story:hover {
+	background: #50FC2E;
+}
+
+.final-s {
+	display: none;
+}
