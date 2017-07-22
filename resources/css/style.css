@@ -128,6 +128,18 @@ header .search input:hover {
 	padding: 2%;
 }
 
+
+/********* читалка *****************/
+.left-cell {
+	width: 50%;
+	float: left;
+}
+
+.right-cell {
+	width: 50%;
+	float: left;
+}	
+
 /* ** Выпадающее меню * */
 
 .a-for-log {
@@ -164,7 +176,7 @@ header .search input:hover {
 
 .wrapper .main form {
 	margin: auto;
-	margin-left: 40%;
+	text-align: center;
 }
 
 .wrapper .main form .spase-inp {
@@ -176,13 +188,6 @@ header .search input:hover {
 	color: #000;
 	background: #fff;
 }
-
-/*input::-webkit-input-placeholder { color: #302D2D; }
-input::-moz-placeholder { color: #302D2D; }
-input::-webkit-input-placeholder {color:#302D2D;}
-input::-moz-placeholder          {color:#302D2D;}/* Firefox 19+ */
-/*input:-moz-placeholder           {color:#302D2D;}/* Firefox 18- */
-/*input:-ms-input-placeholder      {color:#302D2D;}*/
 
 .wrapper .main form .button-in {
 	border: 2px solid #F1F349;
@@ -273,6 +278,13 @@ footer .feedback {
 	display: none;
 }
 
+
+/********* 404 ******/
+.page404 {
+	/*font-size: 1.5em;*/
+}
+
+
 /****** Транслятор */
 
 .but-in-trans {
@@ -287,7 +299,25 @@ footer .feedback {
 	margin-top: 2px;
 }
 
+/**************** Профиль ******/
+.spase-inp-pr {
+	border: 2px solid #F69797;
+	height: 20px;
+	border-radius: 4px;
+	margin: 3px;
+}
 
+.but-in-prof {
+	background: #F89A9A;
+	border: none;
+	padding: 3px;
+	border-radius: 3px;
+	margin-left: 3px;
+}
+
+.but-in-prof:hover {
+	background: #F83F3F;
+}
 
 
 

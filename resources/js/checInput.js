@@ -1,6 +1,6 @@
 var loginCh = /^[a-zA-Z1-9]+$/;
 
-function funSeccess(qwe) {
+function funSeccessinp(qwe) {
 	if (qwe){
 		alert(qwe);
 		return false;
@@ -40,7 +40,7 @@ function checInput() {
 		data: 'login_f=1' + str,
 		cache: false,
 		dataType: "html",
-		success: funSeccess
+		success: funSeccessinp
 	});
 
 

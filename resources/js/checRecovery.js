@@ -1,6 +1,6 @@
 var email = /^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$/;
 
-function funSeccess(qwe) {
+function funSeccessrec(qwe) {
 
 	if(qwe) 
 		alert(qwe);
@@ -30,6 +30,6 @@ function checRecovery(){
 		data: 'login_f=3' + '&email=' + $("#email").val(),
 		cache: false,
 		dataType: "html",
-		success: funSeccess
+		success: funSeccessrec
 	});
 }

@@ -5,17 +5,22 @@ function random_str( $num = 30 )
 	return substr(str_shuffle('0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM') , 0 , $num);
 }
 
+session_start();
+
+$connection = mysqli_connect('localhost' , 'root' , '' , 'wynex-db');
+
+if ($connection == false)
+{
+	echo "Не удалось подключиться к базе данных!";
+	die();
+}
+
 //exit(print_r($_GET));
 
-if($_GET['id_of_story']){
-	if (is_numeric($_GET['id_of_story'])) {
-		session_start();
-		$connection = mysqli_connect('localhost' , 'root' , '' , 'test-db');
-		if ($connection == false)
-		{
-			echo "не удалось подключиться к базе данных!";
-			die();
-		}
+if($_GET['id_of_story'])
+{
+	if ( is_numeric($_GET['id_of_story']) ) 
+	{
 		include 'all/read.php';
 		die();
 	}
@@ -28,28 +33,15 @@ else
 {
 	$page = substr($_SERVER['REQUEST_URI'] , 1 );
 	if ( !preg_match('/^[A-z0-9]{3,15}$/' , $page) )
-		exit('error url'); 
+	{
+		include 'all/page404.php';
+		die();
+	}
 }
-
-/* Подключение к базе данных*/
-
-$connection = mysqli_connect('localhost' , 'root' , '' , 'test-db');
-
-if ($connection == false)
-{
-	echo "не удалось подключиться к базе данных!";
-	die();
-}
-
-/* Подгрузка страниц:*/
-
-session_start();
 
 //exit(var_dump($_SESSION)); //посмотреть сессию
 //unset($_SESSION); // удалить сессию
-//session_destroy();
-
-	
+//session_destroy();	
 
 if ( file_exists('all/' . $page . '.php') )
 	include 'all/' . $page . '.php';
@@ -58,5 +50,5 @@ else if ( $_SESSION['id'] and file_exists('auth/' . $page . '.php') )
 else if ( !$_SESSION['id'] and file_exists('guest/' . $page . '.php') )
 	include 'guest/' . $page . '.php';
 else
-	exit ('Страница 404');
+	include 'all/page404.php';
 ?>
